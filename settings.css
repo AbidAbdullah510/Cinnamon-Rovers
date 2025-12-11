@@ -1,0 +1,174 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body - dark metallic */
+body {
+    background: #1b1b1b;
+    color: #ddd;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(30, 30, 30, 0.85);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar img {
+    width: 28px;
+    filter: drop-shadow(0 0 8px #999);
+    transition: 0.3s;
+}
+
+.navbar img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 15px #fff);
+}
+
+/* Main Section */
+.settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 80px;
+    position: relative;
+    gap: 40px;
+}
+
+.settings-container h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #ccc;
+    text-shadow: 0 0 8px #999;
+}
+
+/* Gears container */
+.gears {
+    display: flex;
+    gap: 60px;
+    position: relative;
+}
+
+/* Gear Base */
+.gear {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    background: radial-gradient(circle at 30% 30%, #666, #222);
+    box-shadow: inset -3px -3px 10px #0008, inset 3px 3px 10px #fff2;
+    animation: rotate 6s linear infinite;
+}
+
+/* Gear Teeth */
+.gear span {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #888;
+    top: -15px;
+    left: 50%;
+    transform-origin: center 50px;
+    border-radius: 2px;
+}
+
+/* Generate 12 teeth with rotation */
+.gear span:nth-child(1) {
+    transform: rotate(0deg) translateX(-50%);
+}
+
+.gear span:nth-child(2) {
+    transform: rotate(30deg) translateX(-50%);
+}
+
+.gear span:nth-child(3) {
+    transform: rotate(60deg) translateX(-50%);
+}
+
+.gear span:nth-child(4) {
+    transform: rotate(90deg) translateX(-50%);
+}
+
+.gear span:nth-child(5) {
+    transform: rotate(120deg) translateX(-50%);
+}
+
+.gear span:nth-child(6) {
+    transform: rotate(150deg) translateX(-50%);
+}
+
+.gear span:nth-child(7) {
+    transform: rotate(180deg) translateX(-50%);
+}
+
+.gear span:nth-child(8) {
+    transform: rotate(210deg) translateX(-50%);
+}
+
+.gear span:nth-child(9) {
+    transform: rotate(240deg) translateX(-50%);
+}
+
+.gear span:nth-child(10) {
+    transform: rotate(270deg) translateX(-50%);
+}
+
+.gear span:nth-child(11) {
+    transform: rotate(300deg) translateX(-50%);
+}
+
+.gear span:nth-child(12) {
+    transform: rotate(330deg) translateX(-50%);
+}
+
+/* Additional Gears with different speeds and sizes */
+.gear1 {
+    width: 120px;
+    height: 120px;
+    animation-duration: 8s;
+}
+
+.gear2 {
+    width: 80px;
+    height: 80px;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+
+.gear3 {
+    width: 100px;
+    height: 100px;
+    animation-duration: 6s;
+}
+
+/* Rotation animation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

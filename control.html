@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Panel - Cinnamon Rovers</title>
+    <link rel="stylesheet" href="control.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html"><img src="home.png" alt="Home"></a></li>
+            <li><a href="achievement.html"><img src="brave_screenshot_grok.com%20(1).png" alt="Achievement"></a></li>
+            <li><a href="control.html"><img src="brave_screenshot_grok.com%20(2).png" alt="Control"></a></li>
+            <li><a href="data.html"><img src="brave_screenshot_grok.com%20(3).png" alt="Data"></a></li>
+            <li><a href="settings.html"><img src="brave_screenshot_grok.com%20(4).png" alt="Settings"></a></li>
+            <li><a href="about_creator.html"><img src="brave_screenshot_grok.com%20(5).png" alt="About Creator"></a>
+            </li>
+            <li><a href="picandabout.html"><img src="brave_screenshot_grok.com%20(6).png" alt="Picture & About"></a>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="control-panel">
+        <h1>Control Panel</h1>
+
+        <!-- Action Buttons -->
+        <div class="buttons">
+            <button class="square-btn" data-command="soil">Soil Test</button>
+            <button class="square-btn" data-command="water">Water</button>
+            <button class="square-btn" data-command="fertilizer">Fertilizer</button>
+        </div>
+
+        <!-- Sliders -->
+        <div class="slider-container">
+            <label>Mode Selector</label>
+            <input type="range" min="1" max="3" step="1" value="2" class="three-slot-slider" id="modeSlider">
+        </div>
+
+        <div class="analog-sliders">
+            <label>Left/Right Tilt</label>
+            <input type="range" min="0" max="180" value="90" class="analog-slider" id="leftRight">
+            <label>Forward/Backward Tilt</label>
+            <input type="range" min="0" max="180" value="90" class="analog-slider" id="forwardBackward">
+        </div>
+
+        <!-- Direction Buttons (Right Side) -->
+        <div class="direction-buttons">
+            <button class="dir-btn" data-command="left">◀ Left</button>
+            <button class="dir-btn" data-command="right">▶ Right</button>
+        </div>
+
+        <!-- Arduino Connect -->
+        <button id="connectBtn">Connect to Arduino</button>
+    </section>
+
+    <script src="control.js"></script>
+</body>
+
+</html>

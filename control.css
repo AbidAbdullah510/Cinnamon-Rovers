@@ -1,0 +1,147 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body & Background */
+body {
+    background: linear-gradient(135deg, #000, #041f00);
+    color: #cfff00;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar ul li img {
+    width: 28px;
+    filter: drop-shadow(0 0 10px #cfff00);
+    transition: 0.3s;
+}
+
+.navbar ul li img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 25px #00ff00);
+}
+
+/* Control Panel Layout */
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    gap: 40px;
+}
+
+/* Action Buttons */
+.buttons {
+    display: flex;
+    gap: 30px;
+}
+
+.square-btn,
+.dir-btn {
+    width: 100px;
+    height: 100px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 15px;
+    background: #022000;
+    color: #cfff00;
+    box-shadow: 0 5px 0 #9fff00, 0 0 15px #cfff00, 0 0 25px #9fff00;
+    cursor: pointer;
+    transition: all 0.15s ease, box-shadow 0.2s ease, transform 0.1s ease;
+    position: relative;
+}
+
+/* Neon Hover Animation */
+.square-btn:hover,
+.dir-btn:hover {
+    box-shadow: 0 5px 0 #9fff00, 0 0 25px #cfff00, 0 0 50px #aaff00;
+    transform: translateY(-2px);
+}
+
+/* Pressed Animation */
+.square-btn.pressed,
+.dir-btn.pressed {
+    transform: translateY(5px);
+    background: #9fff00;
+    color: #000;
+    box-shadow: 0 2px 0 #9fff00, 0 0 20px #cfff00, 0 0 35px #aaff00;
+}
+
+/* Sliders */
+.slider-container,
+.analog-sliders {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    text-align: center;
+}
+
+.three-slot-slider,
+.analog-slider {
+    width: 100%;
+    accent-color: #cfff00;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.three-slot-slider:hover,
+.analog-slider:hover {
+    box-shadow: 0 0 15px #cfff00, 0 0 25px #aaff00;
+}
+
+/* Direction Buttons Layout */
+.direction-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 150px;
+}
+
+/* Connect Button */
+#connectBtn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    background: #022000;
+    color: #cfff00;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 0 #9fff00, 0 0 15px #cfff00, 0 0 25px #aaff00;
+    cursor: pointer;
+    transition: all 0.15s ease, box-shadow 0.2s ease;
+}
+
+#connectBtn:hover {
+    box-shadow: 0 5px 0 #9fff00, 0 0 25px #cfff00, 0 0 50px #aaff00;
+}
+
+#connectBtn:active {
+    transform: translateY(5px);
+    background: #9fff00;
+    color: #000;
+    box-shadow: 0 2px 0 #9fff00, 0 0 20px #cfff00, 0 0 35px #aaff00;
+}

@@ -1,0 +1,102 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Dark Royal Background */
+body {
+    background: linear-gradient(135deg, #0a0a0a, #120052);
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.navbar ul li img {
+    width: 28px;
+    filter: drop-shadow(0 0 8px #ff00ff);
+    transition: 0.3s;
+}
+
+.navbar ul li img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px #ff69b4);
+}
+
+/* Achievement Section */
+.achievement-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.achievement-title {
+    font-size: 4rem;
+    color: #ff00ff;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff69b4, 0 0 50px #ff1493;
+    margin-bottom: 20px;
+}
+
+.achievement-text {
+    font-size: 1.8rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00bfff;
+    animation: glowText 2s infinite alternate;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #000;
+    font-size: 1rem;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff00ff;
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 10px #00ffff, 0 0 20px #00bfff;
+    }
+
+    to {
+        text-shadow: 0 0 25px #00ffff, 0 0 50px #00bfff;
+    }
+}
