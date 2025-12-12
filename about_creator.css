@@ -1,0 +1,138 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body */
+body {
+    background: #0a0f2f;
+    color: #e0e0ff;
+    min-height: 100vh;
+    padding-top: 80px;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 30, 0.85);
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar img {
+    width: 28px;
+    filter: drop-shadow(0 0 8px #00f0ff);
+    transition: 0.3s;
+}
+
+.navbar img:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 20px #00ffff);
+}
+
+/* Typewriter */
+.typewriter h1,
+.typewriter h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-weight: 700;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+    min-height: 40px;
+}
+
+/* Profile Picture */
+.profile-pic-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #00ffff;
+    box-shadow: 0 0 25px #00f0ff, 0 0 50px #00aaff;
+    transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05) rotate(3deg);
+}
+
+/* Projects Section */
+.projects-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #00e0ff;
+    text-shadow: 0 0 15px #00f0ff;
+}
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.project-card {
+    background: rgba(0, 0, 50, 0.6);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px #00f0ff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 35px #00ffff, 0 0 60px #00f0ff;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-text {
+    color: #fff;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .projects-container {
+        gap: 30px;
+    }
+
+    .profile-pic {
+        width: 140px;
+        height: 140px;
+    }
+}
